@@ -1,12 +1,12 @@
-node 'puppet.local' {
+node puppet.local {
   include role::master
   notify { 'this is the puppet master': }
 }
 
-node 'elk.local' {
+node elk.local {
   include role::elk
 }
 
-node 'default' {
+node default {
   notify { 'this node did not match any of the listed definitions': }
 }

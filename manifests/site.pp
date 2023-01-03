@@ -1,4 +1,4 @@
-node puppet.local {
+node 192.168.50.10 {
   include role::master
   notify { 'this is the puppet master': }
 }
